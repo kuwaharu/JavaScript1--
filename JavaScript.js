@@ -1,22 +1,22 @@
 
-const have = '========================\n現在持っているタスクの一覧\n========================';
+const title = '========================\n現在持っているタスクの一覧\n========================';
 const tasks = ['掃除', '買い物', '散歩'];
 
-console.log(have);
+console.log(title);
 
-const list = tasks => {
+const hasList = tasks => {
 tasks.forEach((value, index) => {
   console.log(`${index}:${value}`);
 });
 };
-list(tasks);
+hasList(tasks);
 
 const input = prompt('タスクを入力してください');
 
 const addTask = input => {
-  console.log(have);
+  console.log(title);
   tasks.push(input);
-  list(tasks);
+  hasList(tasks);
   alert('新しいタスクを追加しました。');
 };
 addTask(input);
